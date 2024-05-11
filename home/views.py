@@ -1,11 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
+from home.models import Sliders
 
 # Create your views here.
 
 
-def index (request):
-    context = {
-        'title': "SeoAgency"        
-    }
-    return render(request, "home/index.html",context)
+def index(request):
+    sliders = Sliders.objects.all()
+    context = {"title": "SeoAgency", "sliders": sliders}
+    return render(request, "home/index.html", context)

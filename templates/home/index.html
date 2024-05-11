@@ -3,6 +3,50 @@
 
 {% block content %}
 <section>
-<div class="container">content</div>
+<main class="creasoft-wrap">
+    <div class="line_wrap">
+      <div class="line_item"></div>
+      <div class="line_item"></div>
+      <div class="line_item"></div>
+      <div class="line_item"></div>
+      <div class="line_item"></div>
+    </div>
+
+    {% for slider in sliders|slice:":1" %}
+    <section class="hero-area">
+      <div class="hero-wrapper">
+        <div class="container">
+          <div class="row home2-hero">
+            <div class="col-lg-6">
+              <div class="hero-content" style="margin-top:80px !important;">
+                <h1>{% if slider.title %}{{ slider.title }}{% endif %}
+                  <span>{% if slider.subtitle %}{{ slider.subtitle }}{% endif %}</span>
+              </h1>
+              <p>{% if slider.description %}{{ slider.description|safe }}{% endif %}</p>
+                <div class="buttons">
+                    {% if slider.button_url or slider.button_text %}
+                    <div class="cmn-btn">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                        <a href="{{ slider.button_url }}">{{ slider.button_text }}</a>
+                    </div>
+                    {% endif %}
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+                {% if slider.image %}
+                <div class="hero-img">
+                    <img src="{{ slider.image.url }}" class="slider_img"
+                        alt>
+                </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endfor %}
+
 </section>
 {% endblock content %}

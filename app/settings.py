@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     "django.contrib.postgres",
     'allauth',
     'allauth.account',
@@ -56,8 +58,9 @@ INSTALLED_APPS = [
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
@@ -150,6 +153,7 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
