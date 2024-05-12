@@ -49,4 +49,55 @@
     {% endfor %}
 
 </section>
+
+  <!--====================== About Section ======================-->
+  {% if about %}
+  <section class="about-area sec-mar-bottom">
+      <div class="container">
+          <div class="row mt-5">
+              <div class="col-lg-6 or-2 wow animate fadeIn" data-wow-delay="200ms" data-wow-duration="1500ms">
+                  <div class="sec-title layout2">
+                      {% if about.subtitle %}
+                          <span>{{ about.subtitle }}</span>
+                      {% endif %}
+                      {% if about.title %}
+                          <h2>{{ about.title }}</h2>
+                      {% endif %}
+                  </div>
+                  <div class="about-left ">
+                      {% if about.short_description %}
+                          <h3>{{ about.short_description }}</h3>
+                      {% endif %}
+                      {% if about.long_description %}
+                          <p>{{ about.long_description|safe }}</p>
+                      {% endif %}
+                      <div class="company-since">
+                  
+                              <div class="company-logo">
+                                <h3>SeoAgency</h3>
+                                  {% comment %} <img src="{{ settings.logo_dark.url }}" width="300" alt> {% endcomment %}
+                              </div>
+                        
+                          {% if about.ranking_number %}
+                              <strong>#{{ about.ranking_number }}</strong>
+                          {% endif %}
+                          <h4>{% if about.tag_line %}{{ about.tag_line }}{% endif %} <span>{% if about.experience %}{{ about.experience }}{% endif %}</span></h4>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 or-1 wow animate fadeIn" data-wow-delay="200ms" data-wow-duration="1500ms">
+                  <div class="about-right layout2">
+                      {% if about.image %}
+                          <div class="banner-1">
+                              <img src="{{ about.image.url }}" alt>
+                          </div>
+                      {% endif %}
+                   
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  {% endif %}
+
 {% endblock content %}

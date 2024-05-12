@@ -2,7 +2,62 @@
 {% load static %} 
 
 {% block content %}
-<section>
-<div class="container">SERVICE</div>
+<div class="line_wrap">
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+</div>
+
+<section class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb-wrapper">
+                    <div class="breadcrumb-cnt">
+                        <h1>Services</h1>
+                        <span><a href="{% url "home:index" %}">Home</a><i class="bi bi-arrow-right"></i>Services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+{% if services %}
+        <section class="services-grid sec-mar">
+            <div class="container">
+                <div class="title-wrap">
+                    <div class="sec-title">
+                        <span>Our Solutions</span>
+                        <h2>Services</h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                {% for service in services %}
+                    <div class="col-md-6 col-lg-4 wow animate fadeInUp" data-wow-delay="200ms"
+                        data-wow-duration="1500ms">
+                        <div class="single-service">
+                            <span>0{{forloop.counter}}</span>
+                            {% if service.fontawesome_icon_class %}
+                                <div class="icon">
+                                    <i class="{{ service.fontawesome_icon_class }} service-ico"></i>
+                                </div>
+                            {% endif %}
+                            {% if service.name %}
+                            <h4>{{ service.name }}</h4>
+                            {% endif %}
+                            {% if service.short_description %}
+                            <p>{{ service.short_description }}</p>
+                            {% endif %}
+                            <div class="read-btn">
+                                <a href="#">Start project</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
 {% endblock content %}
