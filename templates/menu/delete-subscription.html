@@ -26,22 +26,16 @@
 </section>
 
 <section>
-    <div class="container bg-white shadow-md p-2 form-layout text-center rounded-2">
-            
-          <h5>Subscriptions menu</h5>  
-          <h4>Curent subscription status: {{SubscriptionPlan}}</h4>
-          {% if SubscriptionID %}
-                 <a class="btn btn-lg btn-danger mt-3" id="delete-btn" href="{% url 'menu:delete-subscription' SubscriptionID %}">
-                Delete Subscription</a>
-          {% endif %}
-        
+    <div class="container bg-white shadow-md p-5 form-layout text-center rounded-2">
+        <div class="row">
+            <h5> {{SubscriptionPlan}} Subscription Deleted!</h5>
+            <h1>✔️</h1>
+            <div class="cmn-btn">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                    <a href="{% url 'home:index' %}">Home</a>
+            </div>
       </div>
-      
-      <div class="container bg-white shadow-md p-2 form-layout text-center rounded-2">
-        <hr>
-        <h5> User Menu </h5>
-        <a class="btn btn-lg btn-danger mt-2" href="/accounts/logout">Exit</a>
-     </div>
 
 </section>
 {% endblock content %}

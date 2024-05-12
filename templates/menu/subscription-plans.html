@@ -1,0 +1,145 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
+<div class="line_wrap">
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+</div>
+
+<section class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb-wrapper">
+                    <div class="breadcrumb-cnt">
+                        <h1>Subscribe</h1>
+                        <span><a href="{% url "home:index" %}">Home</a><i class="bi bi-arrow-right"></i>Subscribe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+
+{% if plan == "Business" %}
+    <div class="container bg-white shadow-md p-3 form-layout text-center rounded-2">
+        <div class="row col-12">
+          <div class="container col-5 text-ceter shadow-md p-5 rounded-3 form-layout bg-white">
+              <h3>Business Subscription</h3>
+            <p>Subscribe to our services and experience satisfaction with top-notch service quality.</p>  
+            <h5>990€/month</h5>
+            <hr>
+            <div id="paypal-button-container-P-9RY347892A836424EMZAO4YI"></div>
+            <script src="https://www.paypal.com/sdk/js?client-id=AZNfwXRFzpV4yLecMFW7Y5TDfV8_0ggmTX5gxDTNOhTjVWX65UfkU5eb49hbyAfWXN2prGlw01PDluMj&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+            <script>
+              paypal
+                .Buttons({
+                  style: {
+                    shape: "pill",
+                    color: "gold",
+                    layout: "horizontal",
+                    label: "subscribe",
+                  },
+                  createSubscription: function (data, actions) {
+                    return actions.subscription.create({
+                      /* Creates the subscription */
+                      plan_id: "P-9RY347892A836424EMZAO4YI",
+                    });
+                  },
+                  onApprove: function (data, actions) {
+                    let baseURL = window.location.origin; 
+                    let currentUrl = 'menu/create-subscription/' + data.subscriptionID + '/Business' + '/990';
+                    let fullPath = baseURL + '/' + currentUrl;
+                    window.open(fullPath, '_self');
+                  },
+                })
+                .render("#paypal-button-container-P-9RY347892A836424EMZAO4YI"); 
+            </script>
+          </div>
+    </div>
+{% endif %} 
+    
+{% if plan == "Standard" %}
+    <div class="container bg-white shadow-md p-3 form-layout text-center rounded-2">
+        <div class="row col-12">
+          <div class="container col-5 text-ceter shadow-md p-5 rounded-3 form-layout bg-white">
+              <h3>Standard Subscription</h3>
+            <p>Subscribe to our services and experience satisfaction with top-notch service quality.</p>  
+            <h5>650€/month</h5>
+            <hr>
+            <div id="paypal-button-container-P-35P77217LA311341TMZAO3RY"></div>
+            <script src="https://www.paypal.com/sdk/js?client-id=AZNfwXRFzpV4yLecMFW7Y5TDfV8_0ggmTX5gxDTNOhTjVWX65UfkU5eb49hbyAfWXN2prGlw01PDluMj&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+            <script>
+              paypal
+                .Buttons({
+                  style: {
+                    shape: "pill",
+                    color: "blue",
+                    layout: "horizontal",
+                    label: "subscribe",
+                  },
+                  createSubscription: function (data, actions) {
+                    return actions.subscription.create({
+                      /* Creates the subscription */
+                      plan_id: "P-35P77217LA311341TMZAO3RY",
+                    });
+                  },
+                  onApprove: function (data, actions) {
+                    let baseURL = window.location.origin;
+                    let currentUrl = 'menu/create-subscription/' + data.subscriptionID + '/Standard' + '/650';
+                    let fullPath = baseURL + '/' + currentUrl; 
+                    window.open(fullPath, '_self');
+                  },
+                })
+                .render("#paypal-button-container-P-35P77217LA311341TMZAO3RY");
+            </script>
+          </div>
+    </div>
+{% endif %} 
+
+{% if plan == "Economy" %}
+    <div class="container bg-white shadow-md p-3 form-layout text-center rounded-2">
+        <div class="row col-12">
+          <div class="container col-5 text-ceter shadow-md p-5 rounded-3 form-layout bg-white">
+              <h3>Economy Subscription</h3>
+            <p>Subscribe to our services and experience satisfaction with top-notch service quality.</p>  
+            <h5>500€/month</h5>
+            <hr>
+            <div id="paypal-button-container-P-7VA86369JM674293EMZAOVTY"></div>
+            <script src="https://www.paypal.com/sdk/js?client-id=AZNfwXRFzpV4yLecMFW7Y5TDfV8_0ggmTX5gxDTNOhTjVWX65UfkU5eb49hbyAfWXN2prGlw01PDluMj&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+            <script>
+              paypal
+                .Buttons({
+                  style: {
+                    shape: "pill",
+                    color: "silver",
+                    layout: "horizontal",
+                    label: "subscribe",
+                  },
+                  createSubscription: function (data, actions) {
+                    return actions.subscription.create({
+                      /* Creates the subscription */
+                      plan_id: "P-7VA86369JM674293EMZAOVTY",
+                    });
+                  },
+                  onApprove: function (data, actions) {
+                    let baseURL = window.location.origin;
+                    let currentUrl = 'menu/create-subscription/' + data.subscriptionID + '/Economy' + '/500';
+                    let fullPath = baseURL + '/' + currentUrl;
+                    window.open(fullPath, '_self');
+                  },
+                })
+                .render("#paypal-button-container-P-7VA86369JM674293EMZAOVTY"); 
+            </script>
+          </div>
+    </div>
+{% endif %} 
+
+    </section>
+{% endblock content %}

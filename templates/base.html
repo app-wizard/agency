@@ -54,9 +54,16 @@
                         <li class="has-child {% if request.path == '/projects/' %}active{% endif %}">
                             <a href="{% url 'price:prices' %}">Price</a>
                         </li>
+
+                        {% if user.is_authenticated %}
                         <li class="has-child {% if request.path == '/account/' %}active{% endif %}">
                             <a href="{% url 'menu:menu' %}">Menu</a>
                         </li>
+                        {% else %}
+                        <li class="has-child">
+                            <a href="/accounts/signup">Sign up</a>
+                        </li>
+                        {% endif %}
                     </ul>
                     
              

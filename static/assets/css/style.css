@@ -590,6 +590,9 @@ video {
     .sec-title h2 {
         font-size: 35px
     }
+    .plan-ribbon {
+        right: -38px;
+    }
 }
 
 @media(max-width:767px) {
@@ -2345,6 +2348,8 @@ only screen and (min-width:768px) and (max-width:991px) {
 }
 
 .price-box {
+    position: relative;
+    overflow: hidden;
     background-color: #fff;
     -webkit-box-shadow: 0 0 40px rgba(33, 33, 33, .1);
     box-shadow: 0 0 40px rgba(33, 33, 33, .1);
@@ -6273,7 +6278,7 @@ scrollbar-track {
     position: absolute;
     top: 17px;
     left: auto;
-    right: -55px;
+    right: -67px;
     width: 55%;
     transform: rotate( 
 36deg

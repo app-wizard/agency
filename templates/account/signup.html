@@ -8,6 +8,28 @@
 {% block head_title %}{% trans "Sign Up" %}{% endblock head_title %}
 
 {% block content %}
+<div class="line_wrap">
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+  </div>
+  
+  <section class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb-wrapper">
+                    <div class="breadcrumb-cnt">
+                        <h1>Sign Up</h1>
+                        <span><a href="{% url "home:index" %}">Home</a><i class="bi bi-arrow-right"></i>Sign Up</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
 
 <div class="container col-6 mt-4">
   <form class="signup" method="POST" action="{% url 'account_signup' %}">
@@ -18,7 +40,9 @@
     {% csrf_token %}
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
       {% endif %}
-      <button class="btn btn-primary primaryAction" type="submit">{% trans "Sign Up" %}</button>
+
+       <button class="btn-lg btn-secondary primaryAction" type="submit">{% trans "Sign Up" %}</button>
+
     </form>
 </div>  
 {% endblock content %}

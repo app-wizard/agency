@@ -6,6 +6,29 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock head_title %}
 
 {% block content %}
+<div class="line_wrap">
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+</div>
+
+<section class="breadcrumbs">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="breadcrumb-wrapper">
+                  <div class="breadcrumb-cnt">
+                      <h1>Sign Out</h1>
+                      <span><a href="{% url "home:index" %}">Home</a><i class="bi bi-arrow-right"></i>Sign Out</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
 <div class="container col-6 mt-4">
 
   <h5>{% trans "Sign Out" %}</h5>
