@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags%} 
+
+{% load i18n %}
+{% comment %} {% load account socialaccount %} {% endcomment %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock head_title %}
+
+{% block content %}
+<div class="line_wrap">
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+</div>
+
+<section class="breadcrumbs">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="breadcrumb-wrapper">
+                  <div class="breadcrumb-cnt">
+                      <h1>Create service</h1>
+                      <span><a href="{% url "home:index" %}">Home</a><i class="bi bi-arrow-right"></i>Create service</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="container col-6 mt-4">
+    <p>Please fill out the form below to create a new service.</p>
+    <form method="POST" action="" class="form-layout">
+    {% csrf_token %}
+    {{ CreateServiсeForm|crispy }}
+    <button type="submit" class="btn btn-success">Create Service</button>
+    </form>
+</div>  
+{% endblock content %}

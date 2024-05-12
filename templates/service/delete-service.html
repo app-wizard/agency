@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags%} 
+
+{% load i18n %}
+{% comment %} {% load account socialaccount %} {% endcomment %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock head_title %}
+
+{% block content %}
+<div class="line_wrap">
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+  <div class="line_item"></div>
+</div>
+
+<section class="breadcrumbs">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="breadcrumb-wrapper">
+                  <div class="breadcrumb-cnt">
+                      <h1>Delete service</h1>
+                      <span><a href="{% url "home:index" %}">Home</a><i class="bi bi-arrow-right"></i>Delete service</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="container col-6 mt-4">
+    <h4>Do you really want to delete this service?</h4>
+
+    <form method="POST" action="" class="form-layout">
+        {% csrf_token %}
+        <a href="{% url 'service:services' %}" class="btn me-3 mt-3 btn-info">Cancel</a>
+        <button type="submit" class="btn mt-3 btn-danger">Delete Service</button>
+    </form>
+    
+
+</div>  
+{% endblock content %}

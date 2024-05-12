@@ -33,6 +33,9 @@
                         <h2>Services</h2>
                     </div>
                 </div>
+                {% if user.is_superuser %}
+                <a class="btn btn-lg btn-success m-4" href="{% url 'service:create-service'%}">ADD NEW SERVICE</a>
+                {% endif %}
                 <div class="row g-4">
                 {% for service in services %}
                     <div class="col-md-6 col-lg-4 wow animate fadeInUp" data-wow-delay="200ms"
@@ -50,9 +53,14 @@
                             {% if service.short_description %}
                             <p>{{ service.short_description }}</p>
                             {% endif %}
+                            {% if user.is_superuser %}
+                            <a class="btn btn-secondary mt-3" href="{% url 'service:update-service' service.id%}">Update</a>
+                            <a class="btn btn-danger ms-2 mt-3" href="{% url 'service:delete-service' service.id%}">Delete</a>
+                            {%else%}
                             <div class="read-btn">
                                 <a href="#">Start project</a>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                 {% endfor %}
