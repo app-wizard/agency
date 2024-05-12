@@ -1,15 +1,17 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
+from price.models import Price
 from service.forms import ServiceForm
 from service.models import Service
 
 # Create your views here.
 def service(request):
-
+    price = Price.objects.all().order_by('id')[:3]
     services = Service.objects.all().order_by('id')
     context = {
         'title': "Services",
         'services': services,
+        'prices': price,
     }
 
     return render(request, "service/service.html",context)
@@ -18,6 +20,9 @@ def service(request):
 def create_service(request):
     if not request.user.is_superuser:
         return redirect("service:services")
+    
+    price = Price.objects.all().order_by('id')[:3]
+    services = Service.objects.all().order_by('id')
 
     if request.method == "POST":
         form = ServiceForm(request.POST)
@@ -31,6 +36,8 @@ def create_service(request):
 
     context = {
         "CreateServiсeForm": form,
+        'services': services,
+        'prices': price,
     }
     return render(request, "service/create-service.html", context)
 
@@ -39,6 +46,9 @@ def update_service(request, pk):
     if not request.user.is_superuser:
         return redirect("service:services")
     
+    price = Price.objects.all().order_by('id')[:3]
+    services = Service.objects.all().order_by('id')
+
     try:
         serv = Service.objects.get(id=pk)
 
@@ -54,6 +64,8 @@ def update_service(request, pk):
             return redirect("service:services")
     context = {
         "UpdateServiсeForm": form,
+        'services': services,
+        'prices': price,
     }
 
     return render(request, "service/update-service.html", context)
@@ -63,6 +75,9 @@ def update_service(request, pk):
 def delete_service(request, pk):
     if not request.user.is_superuser:
         return redirect("service:services")
+    
+    price = Price.objects.all().order_by('id')[:3]
+    services = Service.objects.all().order_by('id')
     
     try:
         serv = Service.objects.get(id=pk)
@@ -74,4 +89,8 @@ def delete_service(request, pk):
         serv.delete()
         return redirect("service:services")
 
-    return render(request, "service/delete-service.html")
+    context = {
+        'services': services,
+        'prices': price,
+    }
+    return render(request, "service/delete-service.html",context)
