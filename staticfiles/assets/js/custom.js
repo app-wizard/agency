@@ -6,9 +6,18 @@
     document.addEventListener('mousemove', function(e) {
         var x = e.clientX;
         var y = e.clientY;
-        // cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
     });
     
+    document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+        const spinner = document.querySelector('.spinner');
+        spinner.style.display = 'flex';  
+            setTimeout(function() {
+            spinner.style.display = 'none'; 
+        }, 10000); 
+   
+ 
+    });
+
     $('a').hover(function() {
         $('.cursor').css({});
     }, function() {
