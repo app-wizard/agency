@@ -1,0 +1,111 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
+<div class="line_wrap">
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+</div>
+
+<section class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb-wrapper">
+                    <div class="breadcrumb-cnt">
+                        <h1>Contact Us</h1>
+                        <span><a href="{% url "home:index" %}">Home</a><i class="bi bi-arrow-right"></i>Contact Us</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="contact-area sec-mar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-5">
+                    <div class="contact-left">
+                        <div class="sec-title layout2">
+                            <span>Get in touch</span>
+                        </div>
+                        <ul class="social-follow">
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                        <div class="informations">
+                         
+                            <div class="single-info">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info">
+                                    <h3>Location</h3>
+                                    <p>Ireland, Limerick, V42YNNN</p>
+                                </div>
+                            </div>
+
+                            <div class="single-info">
+                                <div class="icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="info">
+                                    <h3>Phone</h3>
+                                    <a href="tel:88009001122">8(800)9001122</a>
+                                </div>
+                            </div>
+
+
+                            <div class="single-info">
+                                <div class="icon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <div class="info">
+                                    <h3>Email</h3>
+                                    <a href="mailto:admin@sale.com">admin@sale.com</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <div class="getin-touch">
+                        <div class="contact-form wow animate fadeInUp" data-wow-delay="200ms"
+                            data-wow-duration="1500ms">
+                            <h3>Have Any Questions</h3>
+                            {% comment %} <div id="custom-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Success!</strong> Your message has been sent successfully! We will get back to you soon.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div> {% endcomment %}
+                                                          
+                            <form method="POST" class="cntform" id="contact-form">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="text" name="name" required placeholder="Enter your name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" name="email" required placeholder="Enter your email">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" name="phone" placeholder="Enter your phone">
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="message" cols="30" rows="10"
+                                            placeholder="Your message"></textarea>
+                                    </div>
+                                    <button type="submit" class="contact-btn btn btn-lg btn-secondary">Send Message</button>                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+{% endblock content %}

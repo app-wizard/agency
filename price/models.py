@@ -12,4 +12,4 @@ class Price(models.Model):
     top_text = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
-        return self.title or ""
+        return str(self.title) or ""

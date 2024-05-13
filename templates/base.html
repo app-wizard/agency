@@ -45,8 +45,8 @@
                         <li class="has-child {% if request.path == '/' %}active{% endif %}">
                             <a href="{% url 'home:index' %}">Home</a>
                         </li>
-                        <li class="has-child {% if request.path == '/about-us/' %}active{% endif %}">
-                            <a href="{% url 'about:about-us' %}">About Us</a>
+                        <li class="has-child {% if request.path == '/contact/' %}active{% endif %}">
+                            <a href="{% url 'contact:contact' %}">Contact Us</a>
                         </li>
                         <li class="has-child {% if request.path == '/services/' %}active{% endif %}">
                             <a href="{% url 'service:services' %}">Services</a>
@@ -250,109 +250,13 @@
     <script src="{% static 'assets/js/wow.min.js' %}"></script>
 
     <script src="{% static 'assets/js/particles.min.js' %}"></script>
-    <script src="{% static 'assets/js/app.js' %}"></script>
+    {% comment %} <script src="{% static 'assets/js/app.js' %}"></script> {% endcomment %}
 
     <script src="{% static 'assets/js/custom.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> {% endcomment %}
 
-    <script>
-        $(document).ready(function() {
-            $('.subscribe-btn').on('click', function(e) {
-                e.preventDefault();
-                let email = $(this).prev().val();
-    
-                $.ajax({
-                    type: "POST",
-                    url: "#",
-                    data: {
-                        'email': email,
-                        'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val(),
-                    },
-                    dataType: 'json',
-                    success: function(data) {
-                        if(data.status === 'success') {
-                            toastr.success(data.message);
-                            $('.emailfield').val('');
-                        } else {
-                            toastr.error(data.message);
-                        }
-                    }                
-                });
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            // Hide the alert initially
-            $('#custom-alert').hide();
-    
-            $('#contact-form').on('submit', function(e) {
-                e.preventDefault(); // Prevent the default form submission
-                
-                // Get values from the form inputs
-                let name = $('input[name="name"]').val();
-                let email = $('input[name="email"]').val();
-                let phone = $('input[name="phone"]').val();
-                let subject = $('input[name="subject"]').val();
-                let message = $('textarea[name="message"]').val();
-    
-                // Prepare the data to be sent via AJAX
-                let formData = {
-                    'name': name,
-                    'email': email,
-                    'phone': phone,
-                    'subject': subject,
-                    'message': message,
-                    'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val(),
-                };
-    
-                // Send an AJAX POST request
-                $.ajax({
-                    type: "POST",
-                    url: "#",
-                    data: formData,
-                    dataType: 'json',
-                    success: function(data) {
-                        if (data.status === 'success') {
-                            // Show the Bootstrap success alert
-                            $('#custom-alert').removeClass('alert-danger').addClass('alert-success');
-                            $('#custom-alert').html('<strong>Success!</strong> Your message has been sent successfully! We will get back to you soon.');
-                            $('#custom-alert').show();
-    
-                            // Manually trigger the alert dismissal after a delay (e.g., 5 seconds)
-                            setTimeout(function() {
-                                $('#custom-alert').alert('close');
-                            }, 5000); // 5000 milliseconds = 5 seconds
-    
-                            // Show the toastr success notification
-                            toastr.success(data.message);
-    
-                            // Clear the form fields after successful submission
-                            $('.cntform input[type="text"], .cntform input[type="email"], .cntform input[type="number"], .cntform textarea[name="message"]').val('');
-                        } else {
-                            // Show the Bootstrap error alert
-                            $('#custom-alert').removeClass('alert-success').addClass('alert-danger');
-                            $('#custom-alert').html('<strong>Error:</strong> ' + data.message);
-                            $('#custom-alert').show();
-    
-                            // Show the toastr error notification
-                            toastr.error(data.message);
-                        }
-                    },
-                    error: function() {
-                        toastr.error('An error occurred while submitting the form.');
-                    }
-                });
-            });
-        });
-    </script>
-    
-    {% comment %} {% if settings.custom_js %}
-        <script>
-            {{ settings.custom_js }}
-        </script>
-    {% endif %} {% endcomment %}
+
 </body>
 
 </html>

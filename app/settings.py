@@ -55,10 +55,10 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     'ckeditor',
     'home',
-    'about',
     'price',
     'service',
     'menu',
+    'contact',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
