@@ -6022,6 +6022,21 @@ only screen and (min-width:768px) and (max-width:991px) {
 }
 
 /*Custom CSS*/
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
 .swiper-button-next:after, .services-area .swiper-button-prev:after {
     font-size: 20px;
     height: 40px;

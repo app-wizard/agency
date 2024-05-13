@@ -1,0 +1,43 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
+<main class="creasoft-wrap">
+<div class="line_wrap">
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+</div>
+
+<section class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb-wrapper">
+                    <div class="breadcrumb-cnt">
+                        <h1>Email Subscription</h1>
+                        <span><a href="{% url "home:index" %}">Home</a><i class="bi bi-arrow-right"></i>Email Subscription</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container bg-white shadow-md p-5 form-layout text-center rounded-2">
+        <div class="row">
+            <h5> {{SubscriptionPlan}} Email Subscription active!</h5>
+            <h1>✔️</h1>
+            <div class="cmn-btn">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                    <a href="{% url 'home:index' %}">Home</a>
+            </div>
+            {% comment %} <a class="btn btn-primary" href="{% url 'home:index' %}">Home</a> {% endcomment %}
+      </div>
+
+</section>
+{% endblock content %}

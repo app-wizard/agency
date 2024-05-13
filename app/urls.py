@@ -10,4 +10,5 @@ urlpatterns = [
     path('services/', include("service.urls", namespace="service")),
     path('price/', include("price.urls", namespace="price")),
     path('menu/', include("menu.urls", namespace="menu")),
+    path('newsletter/', include("newsletter.urls", namespace="newsletter")),
 ]

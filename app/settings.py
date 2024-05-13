@@ -30,6 +30,13 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 CLIENT_ID = os.environ.get("CLIENT_ID")
 CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
 
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_PORT = '2525'
+
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -59,6 +66,7 @@ INSTALLED_APPS = [
     'service',
     'menu',
     'contact',
+    'newsletter',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"

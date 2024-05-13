@@ -125,10 +125,11 @@
                         </div>
                         <div class="col-lg-6 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div class="subscribe-form">
-                                <form method="post">
+                                <form method="post" action="{% url 'newsletter:mailing' %}" id="subscribe-form">
                                     {% csrf_token %}
                                     <input type="email" name="email" class="emailfield" placeholder="Type Your Email">
                                     <input type="submit" class="subscribe-btn" value="Subscribe">
+                                    <div class="spinner" style="display: none;">Loading...</div>
                                 </form>
                             </div>
                         </div>
