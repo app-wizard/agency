@@ -2,8 +2,6 @@ function initializeParticlesForSliders(sliderCount) {
     for (let i = 1; i <= sliderCount; i++) {
         particlesJS(`particles-js-${i}`, {
             "particles": {
-                // Particle configuration for each slider
-                // Customize as needed for each slider
                 "number": {
                     "value": 30,
                     "density": {

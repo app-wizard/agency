@@ -1,30 +1,30 @@
 @import "https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800&display=swap";
 .pt-50 {
-    padding-top: 50px;
+    padding-top: 50px
 }
 
 * {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 a:focus,
 input:focus,
 textarea:focus,
 button:focus {
-    outline: 0 solid;
+    outline: 0 solid
 }
 
 html,
 body {
-    height: 100%;
+    height: 100%
 }
 
 body {
     font-size: 16px;
-    font-family: saira, sans-serif;
+    font-family: saira, sans-serif
 }
 
 h1,
@@ -35,11 +35,11 @@ h5,
 h6 {
     font-family: saira, sans-serif;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 img {
-    max-width: 100%;
+    max-width: 100%
 }
 
 a,
@@ -47,24 +47,24 @@ ul,
 ol {
     padding: 0;
     margin: 0;
-    list-style: none;
+    list-style: none
 }
 
 p {
     margin: 0;
     color: #272727;
-    line-height: 1.8;
+    line-height: 1.8
 }
 
 @media(max-width:767px) {
     p {
-        font-size: 14px;
+        font-size: 14px
     }
 }
 
 a,
 a:hover {
-    text-decoration: none;
+    text-decoration: none
 }
 
 input,
@@ -75,31 +75,31 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+    vertical-align: middle
 }
 
 .sec-pad {
-    padding: 120px 0;
+    padding: 120px 0
 }
 
 .sec-pad-top {
-    padding-top: 120px;
+    padding-top: 120px
 }
 
 .sec-pad-bottom {
-    padding-bottom: 120px;
+    padding-bottom: 120px
 }
 
 .sec-mar {
-    margin: 120px 0;
+    margin: 120px 0
 }
 
 .sec-mar-top {
-    margin-top: 120px;
+    margin-top: 120px
 }
 
 .sec-mar-bottom {
-    margin-bottom: 120px;
+    margin-bottom: 120px
 }
 
 .preloader {
@@ -118,7 +118,7 @@ video {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: center
 }
 
 @-webkit-keyframes loader {
@@ -126,11 +126,11 @@ video {
     10%,
     100% {
         width: 80px;
-        height: 80px;
+        height: 80px
     }
     65% {
         width: 150px;
-        height: 150px;
+        height: 150px
     }
 }
 
@@ -139,11 +139,11 @@ video {
     10%,
     100% {
         width: 80px;
-        height: 80px;
+        height: 80px
     }
     65% {
         width: 150px;
-        height: 150px;
+        height: 150px
     }
 }
 
@@ -151,14 +151,14 @@ video {
     0%,
     30% {
         -webkit-transform: rotate(0);
-        transform: rotate(0);
+        transform: rotate(0)
     }
     55% {
-        background-color: #fff;
+        background-color: #fff
     }
     100% {
         -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
+        transform: rotate(90deg)
     }
 }
 
@@ -166,14 +166,14 @@ video {
     0%,
     30% {
         -webkit-transform: rotate(0);
-        transform: rotate(0);
+        transform: rotate(0)
     }
     55% {
-        background-color: #75dab4;
+        background-color: #75dab4
     }
     100% {
         -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
+        transform: rotate(90deg)
     }
 }
 
@@ -181,14 +181,14 @@ video {
     0%,
     20% {
         -webkit-transform: rotate(0);
-        transform: rotate(0);
+        transform: rotate(0)
     }
     55% {
-        background-color: #fff;
+        background-color: #fff
     }
     100% {
         -webkit-transform: rotate(-90deg);
-        transform: rotate(-90deg);
+        transform: rotate(-90deg)
     }
 }
 
@@ -196,14 +196,14 @@ video {
     0%,
     20% {
         -webkit-transform: rotate(0);
-        transform: rotate(0);
+        transform: rotate(0)
     }
     55% {
-        background-color: #75dab4;
+        background-color: #75dab4
     }
     100% {
         -webkit-transform: rotate(-90deg);
-        transform: rotate(-90deg);
+        transform: rotate(-90deg)
     }
 }
 
@@ -216,7 +216,7 @@ video {
     -webkit-transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
     transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
     -webkit-animation: loader 1.2s infinite ease-in-out;
-    animation: loader 1.2s infinite ease-in-out;
+    animation: loader 1.2s infinite ease-in-out
 }
 
 .preloader .loader span {
@@ -226,31 +226,31 @@ video {
     height: 40px;
     background-color: #fff;
     -webkit-animation: loaderBlock 1.2s infinite ease-in-out both;
-    animation: loaderBlock 1.2s infinite ease-in-out both;
+    animation: loaderBlock 1.2s infinite ease-in-out both
 }
 
 .preloader .loader span:nth-child(1) {
     top: 0;
-    left: 0;
+    left: 0
 }
 
 .preloader .loader span:nth-child(2) {
     top: 0;
     right: 0;
     -webkit-animation: loaderBlockInverse 1.2s infinite ease-in-out both;
-    animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+    animation: loaderBlockInverse 1.2s infinite ease-in-out both
 }
 
 .preloader .loader span:nth-child(3) {
     bottom: 0;
     left: 0;
     -webkit-animation: loaderBlockInverse 1.2s infinite ease-in-out both;
-    animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+    animation: loaderBlockInverse 1.2s infinite ease-in-out both
 }
 
 .preloader .loader span:nth-child(4) {
     bottom: 0;
-    right: 0;
+    right: 0
 }
 
 .sticky {
@@ -265,13 +265,13 @@ video {
     background-color: #191a1c;
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .2);
     box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-    z-index: 99;
+    z-index: 99
 }
 
 .creasoft-wrap {
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    z-index: 1
 }
 
 .line_wrap {
@@ -289,16 +289,16 @@ video {
 
 @media(max-width:767px) {
     .line_wrap {
-        border-left: 1px solid rgba(0, 0, 0, .03);
+        border-left: 1px solid rgba(0, 0, 0, .03)
     }
 }
 
 .line_wrap.layout2 {
-    border-left: 1px solid rgba(246, 246, 246, .02);
+    border-left: 1px solid rgba(246, 246, 246, .02)
 }
 
 .line_wrap.layout2 .line_item {
-    border-right: 1px solid rgba(246, 246, 246, .02);
+    border-right: 1px solid rgba(246, 246, 246, .02)
 }
 
 .line_wrap:before {
@@ -310,7 +310,7 @@ video {
     -webkit-animation: scroll1 15s ease-out infinite;
     animation: scroll1 15s ease-out infinite;
     background-image: -webkit-gradient(linear, left bottom, left top, from(#000000), to(transparent));
-    background-image: linear-gradient(0deg, #000000, transparent);
+    background-image: linear-gradient(0deg, #000000, transparent)
 }
 
 .line_item {
@@ -319,12 +319,12 @@ video {
     height: 100%;
     position: relative;
     display: inline-block;
-    border-right: 1px solid rgba(23, 22, 26, .06);
+    border-right: 1px solid rgba(23, 22, 26, .06)
 }
 
 @media(max-width:767px) {
     .line_item {
-        border-right: 1px solid rgba(0, 0, 0, .03);
+        border-right: 1px solid rgba(0, 0, 0, .03)
     }
 }
 
@@ -333,76 +333,76 @@ video {
     right: -1px;
     content: "";
     height: 100px;
-    position: absolute;
+    position: absolute
 }
 
 .line_item:nth-child(odd):before {
     -webkit-animation: scroll2 15s ease-out infinite;
     animation: scroll2 15s ease-out infinite;
     background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#000000));
-    background-image: linear-gradient(0deg, transparent, #000000);
+    background-image: linear-gradient(0deg, transparent, #000000)
 }
 
 .line_item:nth-child(even):before {
     -webkit-animation: scroll1 15s ease-out infinite;
     animation: scroll1 15s ease-out infinite;
     background-image: -webkit-gradient(linear, left bottom, left top, from(#000000), to(transparent));
-    background-image: linear-gradient(0deg, #000000, transparent);
+    background-image: linear-gradient(0deg, #000000, transparent)
 }
 
 @-webkit-keyframes scroll1 {
     0% {
         top: 0;
-        opacity: 1;
+        opacity: 1
     }
     50% {
-        top: 50%;
+        top: 50%
     }
     100% {
         top: 100%;
-        opacity: .5;
+        opacity: .5
     }
 }
 
 @keyframes scroll1 {
     0% {
         top: 0;
-        opacity: 1;
+        opacity: 1
     }
     50% {
-        top: 50%;
+        top: 50%
     }
     100% {
         top: 100%;
-        opacity: .5;
+        opacity: .5
     }
 }
 
 @-webkit-keyframes scroll2 {
     0% {
         opacity: 1;
-        bottom: 0;
+        bottom: 0
     }
     50% {
-        bottom: 50%;
+        bottom: 50%
     }
     100% {
         bottom: 100%;
-        opacity: .5;
+        opacity: .5
     }
 }
 
 @keyframes scroll2 {
     0% {
         opacity: 1;
-        bottom: 0;
+        bottom: 0
     }
     50% {
-        bottom: 50%;
+        bottom: 50%
     }
     100% {
         bottom: 100%;
-        opacity: .5;
+        opacity: .5
     }
 }
 
@@ -412,12 +412,12 @@ video {
     background-image: url(../img/breadcrumb-bg.jpg);
     background-size: cover;
     background-position: center center;
-    z-index: 1;
+    z-index: 1
 }
 
 @media(max-width:767px) {
     .breadcrumbs {
-        height: 320px;
+        height: 320px
     }
 }
 
@@ -430,7 +430,7 @@ video {
     width: 100%;
     background-color: #17161a;
     opacity: .93;
-    z-index: -1;
+    z-index: -1
 }
 
 .breadcrumb-wrapper {
@@ -449,12 +449,12 @@ video {
 
 @media(max-width:767px) {
     .breadcrumb-wrapper {
-        height: 300px;
+        height: 300px
     }
 }
 
 .breadcrumb-cnt {
-    position: relative;
+    position: relative
 }
 
 .breadcrumb-cnt h1 {
@@ -462,45 +462,45 @@ video {
     font-weight: 700;
     color: #75dab4;
     text-transform: capitalize;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
 @media only screen and (min-width:768px) and (max-width:991px) {
     .breadcrumb-cnt h1 {
-        font-size: 40px;
+        font-size: 40px
     }
 }
 
 @media(max-width:767px) {
     .breadcrumb-cnt h1 {
-        font-size: 30px;
+        font-size: 30px
     }
 }
 
 .breadcrumb-cnt span {
     font-size: 14px;
     color: #fff;
-    text-transform: capitalize;
+    text-transform: capitalize
 }
 
 .breadcrumb-cnt span a {
     display: inline-block;
-    color: #75dab4;
+    color: #75dab4
 }
 
 .breadcrumb-cnt span i {
-    margin: 0 5px;
+    margin: 0 5px
 }
 
 .breadcrumb-cnt .breadcrumb-video {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 0
 }
 
 @media(max-width:767px) {
     .breadcrumb-cnt .breadcrumb-video {
-        display: none;
+        display: none
     }
 }
 
@@ -545,26 +545,26 @@ video {
     -webkit-animation-duration: 2.5s;
     animation-duration: 2.5s;
     -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite
 }
 
 .title-wrap {
     max-width: 630px;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .sec-title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 50px
 }
 
 .sec-title.layout2 {
-    text-align: left;
+    text-align: left
 }
 
 .sec-title.white h2,
 .sec-title.white p {
-    color: #fff;
+    color: #fff
 }
 
 .sec-title span {
@@ -575,7 +575,7 @@ video {
     text-transform: capitalize;
     border-bottom: 1px solid #75dab4;
     padding-bottom: 2px;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
 .sec-title h2 {
@@ -583,12 +583,12 @@ video {
     font-size: 40px;
     text-transform: capitalize;
     color: #17161a;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 @media only screen and (min-width:992px) and (max-width:1199px) {
     .sec-title h2 {
-        font-size: 35px;
+        font-size: 35px
     }
     .plan-ribbon {
         right: -38px;
@@ -597,13 +597,13 @@ video {
 
 @media(max-width:767px) {
     .sec-title h2 {
-        font-size: 30px;
+        font-size: 30px
     }
 }
 
 .cmn-btn {
     position: relative;
-    display: inline-block;
+    display: inline-block
 }
 
 .cmn-btn a {
@@ -622,13 +622,13 @@ video {
     z-index: 1;
     -webkit-transition: all .8s ease-out 0s;
     transition: all .8s ease-out 0s;
-    vertical-align: top;
+    vertical-align: top
 }
 
 @media(max-width:767px) {
     .cmn-btn a {
         min-width: 140px;
-        font-size: 14px;
+        font-size: 14px
     }
 }
 
@@ -647,23 +647,23 @@ video {
     transform: skewX(45deg) scale(0, 1);
     z-index: -1;
     -webkit-transition: all .8s ease-out 0s;
-    transition: all .8s ease-out 0s;
+    transition: all .8s ease-out 0s
 }
 
 .cmn-btn a:hover {
-    color: #000;
+    color: #000
 }
 
 .cmn-btn a:hover:after {
     -webkit-transform: skewX(45deg) scale(1, 1);
-    transform: skewX(45deg) scale(1, 1);
+    transform: skewX(45deg) scale(1, 1)
 }
 
 .cmn-btn .line-1 {
     position: absolute;
     right: 8px;
     top: 7px;
-    z-index: 2;
+    z-index: 2
 }
 
 .cmn-btn .line-1:before {
@@ -674,7 +674,7 @@ video {
     opacity: .1;
     right: 0;
     -webkit-transition: all .8s ease-out 0s;
-    transition: all .8s ease-out 0s;
+    transition: all .8s ease-out 0s
 }
 
 .cmn-btn .line-1:after {
@@ -684,14 +684,14 @@ video {
     height: 25px;
     opacity: .1;
     -webkit-transition: all .8s ease-out 0s;
-    transition: all .8s ease-out 0s;
+    transition: all .8s ease-out 0s
 }
 
 .cmn-btn .line-2 {
     position: absolute;
     left: 8px;
     bottom: 8px;
-    z-index: 2;
+    z-index: 2
 }
 
 .cmn-btn .line-2:before {
@@ -701,7 +701,7 @@ video {
     height: 25px;
     opacity: .1;
     right: 0;
-    bottom: -2px;
+    bottom: -2px
 }
 
 .cmn-btn .line-2:after {
@@ -710,21 +710,21 @@ video {
     border: 1px solid #fff;
     width: 25px;
     opacity: .1;
-    left: 0;
+    left: 0
 }
 
 .cmn-btn:hover .line-1:before {
     border: 1px solid #000;
-    opacity: .5;
+    opacity: .5
 }
 
 .cmn-btn:hover .line-1:after {
     border: 1px solid #000;
-    opacity: .5;
+    opacity: .5
 }
 
 .mobile-menu-logo {
-    display: none;
+    display: none
 }
 
 .mobile-menu-logo .remove {
@@ -733,7 +733,7 @@ video {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    cursor: pointer;
+    cursor: pointer
 }
 
 .mobile-menu-logo .remove i {
@@ -746,7 +746,7 @@ video {
     text-align: center;
     border-radius: 50%;
     -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    transform: rotate(-45deg)
 }
 
 @media only screen and (max-width:1199px) {
@@ -766,7 +766,7 @@ video {
         -webkit-transition: -webkit-transform .3s ease-in;
         transition: -webkit-transform .3s ease-in;
         transition: transform .3s ease-in;
-        transition: transform .3s ease-in, -webkit-transform .3s ease-in;
+        transition: transform .3s ease-in, -webkit-transform .3s ease-in
     }
     header .main-nav .mobile-menu-logo {
         position: relative;
@@ -774,28 +774,28 @@ video {
         padding: 20px 10px;
         margin-bottom: 20px;
         display: block;
-        border-bottom: 1px solid #75dab4;
+        border-bottom: 1px solid #75dab4
     }
     header .main-nav ul {
         float: none;
         text-align: left;
-        padding: 0;
+        padding: 0
     }
     header .main-nav ul li {
         position: relative;
         display: block;
         border-bottom: 1px solid #eee;
-        padding: 0 10px !important;
+        padding: 0 10px !important
     }
     header .main-nav ul li:last-child {
-        border: none;
+        border: none
     }
     header .main-nav ul li a {
         padding: 10px 0;
         display: block;
         font-weight: 500;
         color: #000;
-        text-transform: capitalize;
+        text-transform: capitalize
     }
     header .main-nav ul li ul.sub-menu {
         position: static;
@@ -813,24 +813,24 @@ video {
         display: none;
         margin-top: 0 !important;
         -webkit-transform: translateY(0px);
-        transform: translateY(0px);
+        transform: translateY(0px)
     }
     header .main-nav ul li ul.sub-menu li {
-        padding: 0 !important;
+        padding: 0 !important
     }
     header .main-nav ul li ul.sub-menu li a {
-        padding: 12px 10px;
+        padding: 12px 10px
     }
     header .main-nav.slidenav {
         -webkit-transform: translateX(0);
-        transform: translateX(0);
+        transform: translateX(0)
     }
     header .main-nav ul li .bi {
         display: block;
         top: 8px;
         right: 10px;
         font-size: 16px;
-        color: #000;
+        color: #000
     }
     .mobile-menu {
         position: relative;
@@ -839,8 +839,10 @@ video {
         border-radius: 50%;
         display: inline-block;
         text-align: right;
-        margin-left: 30px;
+        margin-left: 30px
     }
+
+
     .cross-btn {
         display: inline-block !important;
         position: relative;
@@ -848,7 +850,9 @@ video {
         height: 22px !important;
         cursor: pointer;
         border: 3px solid transparent !important;
+        background: none !important;
     }
+
     .cross-btn span {
         width: 100%;
         height: 2px;
@@ -857,16 +861,16 @@ video {
         position: absolute;
         right: 0;
         -webkit-transition: all .3s;
-        transition: all .3s;
+        transition: all .3s
     }
     .cross-btn .cross-top {
-        top: 0;
+        top: 0
     }
     .cross-btn .cross-middle {
         top: 50%;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
-        width: 100%;
+        width: 100%
     }
     .cross-btn .cross-bottom {
         bottom: 0;
@@ -881,13 +885,13 @@ video {
     .cross-btn.h-active span.cross-middle {
         -webkit-transform: translateX(-30px);
         transform: translateX(-30px);
-        opacity: 0;
+        opacity: 0
     }
     .cross-btn.h-active span.cross-bottom {
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
         bottom: 50%;
-        margin-bottom: -1px;
+        margin-bottom: -1px
     }
 }
 
@@ -909,7 +913,7 @@ video {
     -webkit-transform: scale(.35) translate(-50%, -50%);
     transform: scale(.35) translate(-50%, -50%);
     mix-blend-mode: exclusion;
-    background-color: #fff;
+    background-color: #fff
 }
 
 header {
@@ -917,7 +921,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 2
 }
 
 .header-area {
@@ -932,25 +936,25 @@ header {
     align-items: center;
     padding: 20px 100px;
     -webkit-transition: all .8s ease-out 0s;
-    transition: all .8s ease-out 0s;
+    transition: all .8s ease-out 0s
 }
 
 @media only screen and (min-width:1200px) and (max-width:1399px),
 only screen and (min-width:992px) and (max-width:1199px),
 only screen and (min-width:768px) and (max-width:991px) {
     .header-area {
-        padding: 20px 30px;
+        padding: 20px 30px
     }
 }
 
 @media(max-width:767px) {
     .header-area {
-        padding: 20px 10px;
+        padding: 20px 10px
     }
 }
 
 .logo a {
-    display: inline-block;
+    display: inline-block
 }
 
 .logo a img {
@@ -969,22 +973,22 @@ only screen and (min-width:768px) and (max-width:991px) {
 }
 
 .main-nav {
-    text-align: center;
+    text-align: center
 }
 
 .main-nav ul {
-    list-style: none;
+    list-style: none
 }
 
 .main-nav ul li {
     display: inline-block;
     position: relative;
     padding: 0 20px;
-    color: #e4e4e4;
+    color: #e4e4e4
 }
 
 .main-nav ul li:first-child {
-    padding-left: 0;
+    padding-left: 0
 }
 
 .main-nav ul li a {
@@ -997,15 +1001,15 @@ only screen and (min-width:768px) and (max-width:991px) {
     display: inline-block;
     text-transform: capitalize;
     -webkit-transition: all .5s ease-out 0s;
-    transition: all .5s ease-out 0s;
+    transition: all .5s ease-out 0s
 }
 
 .main-nav ul li a.active {
-    color: #75dab4;
+    color: #75dab4
 }
 
 .main-nav ul li a:hover {
-    color: #75dab4;
+    color: #75dab4
 }
 
 .main-nav ul li i {
@@ -1015,7 +1019,7 @@ only screen and (min-width:768px) and (max-width:991px) {
     font-size: 14px;
     text-align: center;
     z-index: 999;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .main-nav ul li ul.sub-menu {
@@ -1035,7 +1039,7 @@ only screen and (min-width:768px) and (max-width:991px) {
     -webkit-transition: all .5s ease-out 0s;
     transition: all .5s ease-out 0s;
     -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
+    transform: translateY(-10px)
 }
 
 .main-nav ul li ul.sub-menu>li {
@@ -5606,7 +5610,7 @@ only screen and (min-width:768px) and (max-width:991px) {
 .single-blog.layout3:hover .blog-thumb a img {
     border-radius: 10px;
     -webkit-transform: scale(1.1) skewY(0);
-    transform: scale(1.1) skewY(0);
+    transform: scale(1.1) skewY(0)
 }
 
 .single-blog.layout4 {

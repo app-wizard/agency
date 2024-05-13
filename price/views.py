@@ -13,7 +13,8 @@ def prices(request):
     services = Service.objects.all().order_by("id")
     pricings = Price.objects.all().order_by("id")
     context = {
-        "title": "Prices",
+        "title": "Optimize Your Success with SeoAgency",
+        "description": "Choose from SeoAgency's tailored SEO and digital marketing subscription plans ranging from Economy to Business packages to boost your website's performance and growth.",
         "pricings": pricings,
         "services": services,
         "prices": pricings,

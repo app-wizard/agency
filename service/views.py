@@ -10,7 +10,8 @@ def service(request):
     price = Price.objects.all().order_by('id')[:3]
     services = Service.objects.all().order_by('id')
     context = {
-        'title': "Services",
+        'title': "Our Solutions - SEO, Digital Advertising, SMM",
+        'description': "Explore Our Solutions in SEO, Digital Advertising, Social Media Marketing, Automation, and Web & App Development to boost your business efficiency and online presence. Contact us today!",
         'services': services,
         'prices': price,
     }

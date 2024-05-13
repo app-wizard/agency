@@ -1,31 +1,37 @@
-from django.shortcuts import redirect, render
-
+# pylint: disable=no-member
+from django.shortcuts import render
 from contact.forms import ContactForm
 from price.models import Price
 from service.models import Service
-from django.utils import timezone
+
 
 
 # Create your views here.
 def contact(request):
+    """
+    View function for the contact page. Retrieves the latest 3 prices and all services,
+    and renders the contact page with a contact form.
+
+    If the form is submitted and valid, the form data is saved and the 
+    contact page is rendered again.
+    """
     price = Price.objects.all().order_by("id")[:3]
     services = Service.objects.all().order_by("id")
     context = {
-        "title": "Contacts",
+        "title": "SeoAgency: Digital Marketing & Automation Solutions - Contact Us",
+        "description": "Explore SeoAgency's services including SEO, Digital Advertising, and Social Media Marketing. Boost your success with our tailored solutions. Contact us now!",
         "services": services,
         "prices": price,
     }
 
-    if request.method == 'POST':
-        print('tut2')
+    if request.method == "POST":
+        print("tut2")
         form = ContactForm(request.POST)
-        print('tut3')
+        print("tut3")
         if form.is_valid():
             form.save()
             render(request, "contact/contact.html", context)
         else:
             render(request, "contact/contact.html", context)
-   
+
     return render(request, "contact/contact.html", context)
-
-
