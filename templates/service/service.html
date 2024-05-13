@@ -58,7 +58,7 @@
                             <a class="btn btn-danger ms-2 mt-3" href="{% url 'service:delete-service' service.id%}">Delete</a>
                             {%else%}
                             <div class="read-btn">
-                                <a href="#">Start project</a>
+                                <a href="{% url 'contact:contact' %}">Start project</a>
                             </div>
                             {% endif %}
                         </div>
