@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Sitemap: https://agency-8f506ba47bf6.herokuapp.com/sitemap.xml

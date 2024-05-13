@@ -1128,7 +1128,7 @@ only screen and (min-width:768px) and (max-width:991px) {
 .hero-area {
     position: relative;
     height: 110vh;
-    background-image: url(../img/bg.png);
+    background-image: url(../img/bg.webp);
     background-size: cover;
     background-position: top left;
     background-color: #191a1c;
@@ -3071,7 +3071,7 @@ only screen and (min-width:768px) and (max-width:991px) {
     padding: 60px 80px;
     border-radius: 10px;
     background-color: #1a191d;
-    background-image: url(../img/subscribe-bg.png);
+    background-image: url(../img/subscribe-bg.webp);
     background-size: cover;
     background-position: center center
 }
@@ -3181,7 +3181,7 @@ footer {
     position: relative;
     padding-top: 100px;
     margin-top: -100px;
-    background-image: url(../img/footer-bg.png);
+    background-image: url(../img/footer-bg.webp);
     background-size: cover;
     background-position: center center;
     background-color: #191a1c

@@ -14,13 +14,8 @@
     <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <title>{{title}}</title>
-    <style>
-        .service-ico {
-            font-size: 70px !important;
-            color: #5da78b;
-        }
-    </style>
-
+    <link rel="icon" href="{% static 'assets/img/favicon.png' %}" type="image/gif" sizes="16x16">
+    <meta name="description" content="{{description}}">
    
 </head>
 
@@ -148,9 +143,9 @@
                                 </div>
                                 <p>OPTIMIZE YOUR SUCCESS</p>
                                 <ul class="social-media-icons">
-                                    <li><a rel="nofollow noopener noreferrer" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a rel="nofollow noopener noreferrer" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a rel="nofollow noopener noreferrer" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a rel="nofollow noopener noreferrer" target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a rel="nofollow noopener noreferrer" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a rel="nofollow noopener noreferrer" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -224,9 +219,6 @@
 
     </main>
 
-    {% comment %} {% if settings.magic_cursor_is_active %}
-        <div class="cursor"></div>
-    {% endif %} {% endcomment %}
 
     <div id="progress">
         <span id="progress-value"><i class="fas fa-arrow-up"></i></span>

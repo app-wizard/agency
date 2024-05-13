@@ -26,7 +26,8 @@ def index(request):
     price = Price.objects.all().order_by("id")[:3]
 
     context = {
-        "title": "SeoAgency",
+        'title': "SeoAgency: Leading Digital Marketing And Software Development Services",
+        "description": "Empower your business with AgencySeo's innovative digital solutions in SEO, social media marketing, and custom software development. Contact us today!" ,
         "sliders": sliders,
         "about": about,
         "services": service,
