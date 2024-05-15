@@ -19,7 +19,9 @@ def contact(request):
     services = Service.objects.all().order_by("id")
     context = {
         "title": "SeoAgency: Digital Marketing & Automation Solutions - Contact Us",
-        "description": "Explore SeoAgency's services including SEO, Digital Advertising, and Social Media Marketing. Boost your success with our tailored solutions. Contact us now!",
+        "description": ("Explore SeoAgency's services including SEO, Digital Advertising,"
+                        "and Social Media Marketing. Boost your success with our tailored"
+                        "solutions. Contact us now!"),
         "services": services,
         "prices": price,
     }

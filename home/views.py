@@ -12,7 +12,8 @@ def index(request):
     """
     Renders the home page of the SeoAgency website.
 
-    This view function retrieves the necessary data from the database and passes it to the home/index.html template for rendering. The data includes:
+    This view function retrieves the necessary data from the database 
+    and passes it to the home/index.html template for rendering. The data includes:
     - Sliders: All instances of the Sliders model
     - About: The first instance of the About model
     - Services: All instances of the Service model
@@ -27,7 +28,9 @@ def index(request):
 
     context = {
         'title': "SeoAgency: Leading Digital Marketing And Software Development Services",
-        "description": "Empower your business with AgencySeo's innovative digital solutions in SEO, social media marketing, and custom software development. Contact us today!" ,
+        "description": ("Empower your business with AgencySeo's innovative digital solutions"
+                        "in SEO, social media marketing, and custom software development." 
+                        " Contact us today!") ,
         "sliders": sliders,
         "about": about,
         "services": service,

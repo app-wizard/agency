@@ -25,7 +25,8 @@ class EmailTemplate(models.Model):
     """
     Represents an email template for the newsletter.
 
-    The `EmailTemplate` model stores the subject and message content of an email template, as well as the list of subscribers who should receive the email.
+    The `EmailTemplate` model stores the subject and message content 
+    of an email template, as well as the list of subscribers who should receive the email.
 
     Attributes:
         subject (str): The subject line of the email.

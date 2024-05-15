@@ -11,8 +11,6 @@ def get_access_token():
     """
     data = {
         "grant_type": "client_credentials",
-        # "client_id": "Aer6-5735-4553-4565-8573",
-        # "client_secret": "<KEY>"
     }
 
     headers = {
@@ -80,4 +78,3 @@ def get_curent_subscription_paypal(access_token, sub_id):
     else:
         print("Fail to get subscription")
         return None
-
