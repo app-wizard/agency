@@ -27,13 +27,12 @@ def contact(request):
     }
 
     if request.method == "POST":
-        print("tut2")
         form = ContactForm(request.POST)
-        print("tut3")
         if form.is_valid():
             form.save()
-            render(request, "contact/contact.html", context)
+            print(form.cleaned_data)
+            return render(request, "contact/contact_ok.html", context)
         else:
-            render(request, "contact/contact.html", context)
+            return render(request, "contact/contact.html", context)
 
     return render(request, "contact/contact.html", context)

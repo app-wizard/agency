@@ -2502,8 +2502,7 @@ only screen and (min-width:768px) and (max-width:991px) {
     min-width: 200px;
     padding: 10px 30px;
     -webkit-transition: transition(0.5s), transition(0.5s);
-    transition: transition(0.5s), transition(0.5s);
-    transition: transition(0.5s)
+    transition: 0.5s;
 }
 
 .price-btn .line-1 {

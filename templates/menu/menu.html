@@ -27,10 +27,14 @@
 </section>
 
 <section>
-    <div class="container bg-white shadow-md p-2 form-layout text-center rounded-2">
+    <div class="container  bg-white shadow-md p-2 form-layout text-center rounded-2">
             
           <h5>Subscriptions menu</h5>  
+        <div class="row justify-content-center">
+          <div class="card bg-light shadow-md col-6 center p-2 form-layout text-center rounded-2">
           <h4>Curent subscription status: {{SubscriptionPlan}}</h4>
+          </div>
+        </div>
           {% if SubscriptionID %}
                     <button class="btn btn-lg btn-danger mt-3" id="delete-btn" onclick=confirm_delete("{% url 'menu:delete-subscription' SubscriptionID %}")>Delete Subscription</button>  
           {% endif %}

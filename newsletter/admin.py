@@ -16,10 +16,20 @@ class EmailTemplateAdminForm(forms.ModelForm):
     """
 
     class Meta:
+        """
+        Defines the admin interface for the EmailTemplate model.
+
+        The `Meta` class within the `EmailTemplateAdmin` class provides 
+        additional configuration options for the admin interface. 
+        It specifies the model that the admin interface is for (`EmailTemplate`),
+        the fields to display (`'__all__'`), and a custom widget for the `message`
+        field, which sets the height of the textarea to 10 rows.
+        """
+
         model = EmailTemplate
-        fields = '__all__'
+        fields = "__all__"
         widgets = {
-           'message': forms.Textarea(attrs={'rows': 10}),
+            "message": forms.Textarea(attrs={"rows": 10}),
         }
 
 

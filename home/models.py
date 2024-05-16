@@ -58,7 +58,6 @@ class About(models.Model):
     experience = models.CharField(max_length=200, blank=True, null=True)
 
     image = CloudinaryField("image", blank=True, null=True)
-    # image2 = CloudinaryField('image2', blank=True, null=True)
 
     def __str__(self):
         return str(self.title)
