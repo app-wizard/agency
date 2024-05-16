@@ -151,3 +151,7 @@ def delete_subscription(request, sub_id):
 
     except Subscription.DoesNotExist:
         return render(request, "menu/menu.html")
+
+@login_required(login_url="my-login")
+def paypal_success(request):
+    return render(request, "menu/paypal-success.html")
